@@ -1,0 +1,39 @@
+extends includes/tpl.pug
+append head
+  title Moon Wallet
+block body
+  .background
+    .background--gradient
+    .container
+      
+      .topbar
+        .topbar--logo
+          a(href="https://secrettech.io" target="_blank") >_ secret_tech
+        .topbar--links
+          a(href="https://t.me/MoonWallet")
+            img(src="./images/telegram.svg")
+            span Telegram
+          a(href="https://github.com/secret-tech")
+            img(src="./images/github.svg")
+            span GitHub
+
+      .landing
+        .landing--name Turn-key technical solution for ICO crowdsales
+        .landing--description Custom and secure contributor dashboard & smart contracts
+        .landing--button
+          a(href="javascript:void(0);") Our contacts
+    
+      .carousel.js-carousel
+        .carousel--screen.js-carousel--screen
+          img(src="./images/screenshots/1.png")
+        .carousel--screen.js-carousel--screen
+          img(src="./images/screenshots/2.png")
+        .carousel--screen.js-carousel--screen
+          img(src="./images/screenshots/3.png")
+            
+      .carousel--dots.js-carousel--dots
+        .carousel--dot.js-carousel--dot
+        .carousel--dot.js-carousel--dot
+        .carousel--dot.js-carousel--dot
+
+      a(href="https://secrettech.io").footer Created with ❤️ by secret_tech on 🌎 in 2018
