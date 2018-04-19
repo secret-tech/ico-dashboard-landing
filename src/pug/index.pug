@@ -4,25 +4,24 @@ append head
 block body
   .background
     .background--gradient
-    .container
       
-      .topbar
-        .topbar--logo
-          a(href="https://secrettech.io" target="_blank") >_ secret_tech
-        .topbar--links
-          a(href="https://t.me/MoonWallet")
-            img(src="./images/telegram.svg")
-            span Telegram
-          a(href="https://github.com/secret-tech")
-            img(src="./images/github.svg")
-            span GitHub
+  .background-bottom
+    .background-bottom--overlay
+    .background-bottom--gradient
+      
+  .container  
+    .topbar.js-reveal-topbar
+      .topbar--logo
+        a(href="https://secrettech.io" target="_blank") >_ secret_tech
 
-      .landing
-        .landing--name Turn-key technical solution for ICO crowdsales
-        .landing--description Custom and secure contributor dashboard & smart contracts
-        .landing--button
-          a(href="javascript:void(0);") Our contacts
-    
+    .landing
+      .landing--name.js-reveal-landing--name Turn-key technical solution for ICO crowdsales
+      .landing--description.js-reveal-landing--description Custom and secure contributor dashboard & smart contracts
+      .landing--buttons.js-reveal-landing--buttons
+        a(href="javascript:void(0);").landing--buttons--primary Live demo
+        a.landing--buttons--secondary.js-contacts-button Our contacts
+  
+    .js-reveal-carousel
       .carousel.js-carousel
         .carousel--screen.js-carousel--screen
           img(src="./images/screenshots/1.png")
@@ -30,10 +29,100 @@ block body
           img(src="./images/screenshots/2.png")
         .carousel--screen.js-carousel--screen
           img(src="./images/screenshots/3.png")
-            
-      .carousel--dots.js-carousel--dots
-        .carousel--dot.js-carousel--dot
-        .carousel--dot.js-carousel--dot
-        .carousel--dot.js-carousel--dot
+        .carousel--screen.js-carousel--screen
+          img(src="./images/screenshots/4.png")
+        .carousel--screen.js-carousel--screen
+          img(src="./images/screenshots/5.png")
+          
+    .carousel--control.js-reveal-carousel--control
+      button(type="button").carousel--control--prev.js-carousel-prev
+        img(src="./images/icons/carousel-prev.svg")
+      button(type="button").carousel--control--next.js-carousel-next
+        img(src="./images/icons/carousel-next.svg")
+        
+    .features.js-reveal-features
+      .features--title Basic features
+      .features--body
+        .feature.js-reveal-feature-1
+          .feature--title User-friendly interface
+          .feature--text Participation in your crowdsale easy as 1-2-3
+        .feature.js-reveal-feature-2
+          .feature--title Custom smart contracts
+          .feature--text Tune your ICO structure: stages, bonuses, lockup period
+        .feature.js-reveal-feature-3
+          .feature--title Ethereum support
+          .feature--text Native support with wallets generating of the most popular crowdsale cryptocurrency
+        .feature.js-reveal-feature-4
+          .feature--title 2FA authentification
+          .feature--text Protect user account by email and Google Auth
+        .feature.js-reveal-feature-5
+          .feature--title Security
+          .feature--text All our software passed various audits and battle-tested
+        .feature.js-reveal-feature-6
+          .feature--title Custom emails
+          .feature--text Nice way for efficient communication with your contributors
+        .feature.js-reveal-feature-7
+          .feature--title Hosting and administration
+          .feature--text We take care of everything: hosting, installation, SSL, DNS management
+          
+    .features.js-reveal-features
+      .features--title Advanced features
+      .features--body
+        .feature.js-reveal-feature-1
+          .feature--title Multiply cryptocurrencies
+          .feature--text 120+ cryptocurrencies and altcoins via trustable CoinPayments gateway
+        .feature.js-reveal-feature-2
+          .feature--title Referral program
+          .feature--text Reward community for contributors bringing to your ICO
+        .feature.js-reveal-feature-3
+          .feature--title KYC/AML
+          .feature--text Identify contributors  to avoid any legal risks
+        .feature.js-reveal-feature-4
+          .feature--title Live price updates
+          .feature--text Update ETH/USD ratio in live to protect contributors of ETH volatility
+          
+    .about
+      .about--title.js-reveal-about--title About us
+      .about--text.js-reveal-about--text
+        a(href="https://secrettech.io/" target="_blank") secret_tech 
+        | is a team of experienced talented developers aimed to provide the best quality software for blockchain world. Our main goal is to make the blockchain user-friendly and secure. We already successfully helped to run more than 10 ICOs all around the world.
+        
+        
+    .benefits
+      .benefit
+        .benefit--icon.js-reveal-benefit--icon-1
+          img(src="./images/benefits/1.svg")
+        .benefit--title.js-reveal-benefit--title-1 Dashboard
+        .benefit--text.js-reveal-benefit--text-1
+          | Custom dashboard built on top of 
+          a(href="https://github.com/secret-tech/frontend-ico-dashboard" target="_blank") our open source solution 
+          | trusted by developers. It’s have all the required features for successful ICO on board.
+      .benefit
+        .benefit--icon.js-reveal-benefit--icon-2
+          img(src="./images/benefits/2.svg")
+        .benefit--title.js-reveal-benefit--title-2 Contracts
+        .benefit--text.js-reveal-benefit--text-2
+          | We create and audit smart contracts for Ethereum blockchain. Our crowdsale contracts battle-tested, passed various security audits and 
+          a(href="https://github.com/JincorTech/ico" target="_blank") open source.
+      .benefit
+        .benefit--icon.js-reveal-benefit--icon-3
+          img(src="./images/benefits/3.svg")
+        .benefit--title.js-reveal-benefit--title-3 Custom projects
+        .benefit--text.js-reveal-benefit--text-3
+          | Our huge expertise in blockchain and cryptocurrencies allow us deliver MVPs and blockchain projects. 
+          a(href="https://moonwallet.tech/" target="_blank") Example.
+          
+    .contacts.js-contacts-section
+      .contacts--title.js-reveal-contacts--title Contact us to get more details
+      .contacts--body
+        .contact.js-reveal-contact-1
+          .contact--label telegram
+          a(href="https://t.me/el_tonyl" target="_blank").contact--url @el_tonyl
+        .contact.js-reveal-contact-2
+          .contact--label email
+          a(href="mailto:info@secrettech.io" target="_blank").contact--url info@secrettech.io
+        .contact.js-reveal-contact-3
+          .contact--label facebook
+          a(href="https://www.facebook.com/tony.lysakov" target="_blank").contact--url tony.lysakov
 
-      a(href="https://secrettech.io").footer Created with ❤️ by secret_tech on 🌎 in 2018
+    a(href="https://secrettech.io").footer.js-reveal-footer Created with ❤️ by secret_tech on 🌎 in 2018

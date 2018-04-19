@@ -29,6 +29,7 @@ const src = {
 	stls: 'src/css/**/*.css',
 	js: './src/**/*.js',
 	images: 'src/images/**/*',
+  video: 'src/video/**/*',
   favicon: 'src/images/favicon.png'
 };
 
@@ -38,6 +39,7 @@ const dist = {
 	css: 'build/css/',
 	js: 'build/',
 	images: 'build/images/',
+  video: 'build/video/',
   favicon: 'build/icons'
 };
 
@@ -75,6 +77,10 @@ const images = () => gulp
   .src(src.images)
   .pipe(image())
 	.pipe(gulp.dest(dist.images));
+
+const video = () => gulp
+  .src(src.video)
+  .pipe(gulp.dest(dist.video));
 
 const favicon = done => {
 	realFavicon.generateFavicon({
@@ -148,6 +154,7 @@ gulp.task('watch', () => {
   gulp.watch(src.html, { debounceDelay: 300 }, ['html']);
 	gulp.watch(src.css, ['css']);
 	gulp.watch(src.images, ['images']);
+  gulp.watch(src.video, ['video']);
 });
 
 const watch = () => {
@@ -155,6 +162,7 @@ const watch = () => {
   gulp.watch(src.css, css);
   gulp.watch(src.js, scripts);
   gulp.watch(src.images, images);
+  gulp.watch(src.video, video);
 };
 
 const browserSync = () => {
@@ -166,8 +174,8 @@ const browserSync = () => {
 };
 
 const fav = gulp.series(favicon, injectFav);
-const build = gulp.series(html, gulp.parallel(scripts, css), images, fav);
-const start = gulp.series(html, gulp.parallel(scripts, css), images, gulp.parallel(watch, browserSync));
+const build = gulp.series(html, gulp.parallel(scripts, css), images, video, fav);
+const start = gulp.series(html, gulp.parallel(scripts, css), images, video, gulp.parallel(watch, browserSync));
 
 gulp.task('default', start);
 gulp.task('build', build);
@@ -175,5 +183,5 @@ gulp.task('build', build);
 gulp.task('deploy',
   () => gulp
     .src(dist.all)
-    .pipe(ghp())
+    .pipe(githubPages())
 );

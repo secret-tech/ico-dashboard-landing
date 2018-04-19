@@ -1,5 +1,6 @@
 import ScrollReveal from 'scrollreveal';
 import Siema from 'siema';
+import zenscroll from 'zenscroll';
 
 // scroll
 window.sr = ScrollReveal({
@@ -13,74 +14,182 @@ window.sr = ScrollReveal({
 
 // landing
 sr.reveal('.js-reveal-topbar', {
-  delay: 400,
+  delay: 100,
   duration: 300,
   distance: '-80px'
 });
 
-sr.reveal('.js-reveal-landing', {
-  delay: 100,
-  duration: 300,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-buttons', {
+sr.reveal('.js-reveal-landing--name', {
   delay: 200,
   duration: 300,
   distance: '80px'
 });
 
-sr.reveal('.js-reveal-screenshots', {
+sr.reveal('.js-reveal-landing--description', {
   delay: 300,
   duration: 300,
   distance: '80px'
 });
 
-sr.reveal('.js-reveal-benefits', {
-  delay: 300,
-  duration: 500,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-free', {
-  delay: 500,
-  duration: 500,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-team-title', {
-  delay: 100,
-  duration: 500,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-team-first', {
-  delay: 200,
-  duration: 500,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-team-second', {
-  delay: 300,
-  duration: 500,
-  distance: '80px'
-});
-
-sr.reveal('.js-reveal-team-third', {
+sr.reveal('.js-reveal-landing--buttons', {
   delay: 400,
-  duration: 500,
+  duration: 300,
   distance: '80px'
 });
 
-sr.reveal('.js-reveal-contacts', {
+sr.reveal('.js-reveal-carousel', {
+  delay: 500,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-carousel--control', {
   delay: 200,
-  duration: 500,
+  duration: 300,
   distance: '80px'
 });
 
-sr.reveal('.js-reveal-donate', {
+sr.reveal('.js-reveal-features', {
+  delay: 200,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-1', {
+  delay: 250,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-2', {
   delay: 300,
-  duration: 500,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-3', {
+  delay: 350,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-4', {
+  delay: 400,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-5', {
+  delay: 450,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-6', {
+  delay: 500,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-feature-7', {
+  delay: 550,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-about--title', {
+  delay: 200,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-about--text', {
+  delay: 300,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--icon-1', {
+  delay: 200,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--icon-2', {
+  delay: 250,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--icon-3', {
+  delay: 300,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--title-1', {
+  delay: 250,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--title-2', {
+  delay: 300,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--title-3', {
+  delay: 350,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--text-1', {
+  delay: 300,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--text-2', {
+  delay: 350,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-benefit--text-3', {
+  delay: 400,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-contacts--title', {
+  delay: 200,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-contact-1', {
+  delay: 250,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-contact-2', {
+  delay: 300,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-contact-3', {
+  delay: 350,
+  duration: 300,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-footer', {
+  delay: 200,
+  duration: 300,
   distance: '80px'
 });
 
@@ -92,27 +201,18 @@ const siema = new Siema({
     perPage: 1,
     startIndex: 0,
     threshold: 20,
-    draggable: true,
-    loop: false
+    draggable: false,
+    loop: true
 });
 
-const dots = [].map.call(document.querySelectorAll('.js-carousel--dot'), obj => obj);
-const slides = [].map.call(document.querySelectorAll('.js-carousel--screen'), obj => obj);
+const prevButton = document.querySelector('.js-carousel-prev');
+const nextButton = document.querySelector('.js-carousel-next');
 
-const setActive = (collection, index) => {
-    const element = collection[index];
-    const className = element.className
-    collection.map(el => el.classList.remove('active'));
-    element.classList.toggle('active');
-}
+prevButton.addEventListener('click', () => siema.prev());
+nextButton.addEventListener('click', () => siema.next());
 
-setActive(dots, 0);
-setActive(slides, 0);
+// smooth scroll
+const contactsSection = document.querySelector('.js-contacts-section');
+const contactsButton = document.querySelector('.js-contacts-button');
 
-dots.map((dot, i) => {
-    dot.addEventListener('click', () => {
-        setActive(dots, i);
-        setActive(slides, i);
-        return siema.goTo(i);
-    });
-});
+contactsButton.addEventListener('click', () => zenscroll.to(contactsSection));
