@@ -259,11 +259,6 @@ html, body {
   border-radius: 6px;
 }
 
-.carousel--control {
-  margin-top: 40px;
-  text-align: center;
-}
-
 .carousel--control--prev,
 .carousel--control--next {
   background-color: transparent;
@@ -272,11 +267,22 @@ html, body {
   outline: none;
   padding: 0 5px;
   margin: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
 }
 
 .carousel--control--prev > img,
 .carousel--control--next > img {
-  width: 18px;
+  width: 24px;
+}
+
+.carousel--control--prev {
+  left: -20px;
+}
+
+.carousel--control--next {
+  right: -20px;
 }
 
 /* features */
