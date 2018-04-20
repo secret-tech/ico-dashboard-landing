@@ -477,6 +477,42 @@ html, body {
   }
 }
 
+/* to top */
+
+.toTop {
+  text-align: center;
+  padding: 0 0 50px;
+}
+
+.toTop--button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 150px;
+}
+
+.toTop--arrow {
+  width: 30px;
+}
+
+.toTop--text {
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  opacity: 0;
+  transition: 0.1s linear all;
+}
+
+.toTop--button:hover .toTop--text {
+  opacity: 1;
+  bottom: -10px;
+}
+
 /* footer */
 
 .footer {
