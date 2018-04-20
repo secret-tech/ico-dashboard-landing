@@ -216,3 +216,8 @@ const contactsSection = document.querySelector('.js-contacts-section');
 const contactsButton = document.querySelector('.js-contacts-button');
 
 contactsButton.addEventListener('click', () => zenscroll.to(contactsSection));
+
+const topbarSection = document.querySelector('.js-topbar-section');
+const backToTopButton = document.querySelector('.js-toTop-button');
+
+backToTopButton.addEventListener('click', () => zenscroll.to(topbarSection));
