@@ -9,7 +9,7 @@
 }
 
 a {
-  color: #48AFF0;
+  color: #009cff;
   text-decoration: none;
 }
 
@@ -158,6 +158,23 @@ html, body {
   .topbar--logo > a {
     font-size: 14px;
   }
+
+  .topbar--links {
+    margin: 0 -10px;
+  }
+
+  .topbar--links a {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .topbar--links a > img {
+    margin-right: 0px;
+  }
+
+  .topbar--links a > span {
+    display: none;
+  }
 }
 
 /* landing */
@@ -194,7 +211,8 @@ html, body {
 }
 
 .landing--buttons--primary {
-  background-color: #48AFF0;
+  background-color: #009cff;
+  font-weight: 600;
   transition: 0.1s linear all;
 }
 
@@ -343,10 +361,71 @@ html, body {
   }
 }
 
+/* custom */
+
+.custom {
+  margin: 100px 0;
+}
+
+.custom--title {
+  font-weight: 900;
+  font-size: 48px;
+  margin: 0 0 80px 0;
+}
+
+.custom--text {
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 0 40px 0;
+}
+
+.custom--text .strong {
+  font-weight: 600;
+}
+
+.custom--buttons {
+  margin-top: 40px;
+}
+
+.custom--buttons > a {
+  font-size: 18px;
+  color: #f5f5f5;
+  padding: 12px 40px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom--buttons--primary {
+  background-color: #009cff;
+  font-weight: 600;
+  transition: 0.1s linear all;
+}
+
+.custom--buttons--primary:hover {
+  text-decoration: none;
+  background-color: #2b95d6;
+}
+
+@media only screen and (max-width: 600px) {
+  .custom {
+    margin: 50px 0;
+  }
+
+  .custom--title {
+    font-size: 24px;
+    margin: 0 0 30px 0;
+  }
+
+  .custom--text {
+    font-size: 18px;
+  }
+}
+
 /* about */
 
 .about {
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .about--title {
@@ -359,6 +438,7 @@ html, body {
   font-size: 24px;
   line-height: 1.5;
   max-width: 800px;
+  margin: 0 0 40px 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -432,10 +512,89 @@ html, body {
   }
 }
 
+/* team */
+
+.container-team {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.team {
+  padding: 100px 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .team {
+    display: none;
+  }
+}
+
+.team .title {
+  font-weight: 900;
+  font-size: 36px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.members {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.members .member {
+  text-align: center;
+  width: 250px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.members .member:hover .photo {
+  transform: scale(1.1);
+}
+
+.members .member:hover .photo .glasses {
+  opacity: 1;
+}
+
+.members .member .photo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  transition: 0.3s ease all;
+}
+
+.members .member .photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.members .member .photo img.glasses {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+}
+
+.members .member .name {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Raleway';
+  margin-top: 20px;
+}
+
+.members .member .job {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 /* contacts */
 
 .contacts {
-  margin: 150px 0;
+  margin: 50px 0 150px;
 }
 
 .contacts--title {
@@ -455,6 +614,8 @@ html, body {
 
 .contact {
   text-align: center;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .contact--label {
@@ -517,6 +678,39 @@ html, body {
 .toTop--button:hover .toTop--text {
   opacity: 1;
   bottom: -10px;
+}
+
+/* donate */
+
+.donate {
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.donate .title {
+  font-family: 'Raleway';
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.donate .address {
+  font-size: 36px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .donate {
+    display: none;
+  }
 }
 
 /* footer */

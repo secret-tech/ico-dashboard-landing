@@ -97,6 +97,30 @@ sr.reveal('.js-reveal-feature-7', {
   distance: '80px'
 });
 
+sr.reveal('.js-reveal-team-title', {
+  delay: 100,
+  duration: 500,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-team-first', {
+  delay: 200,
+  duration: 500,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-team-second', {
+  delay: 300,
+  duration: 500,
+  distance: '80px'
+});
+
+sr.reveal('.js-reveal-team-third', {
+  delay: 400,
+  duration: 500,
+  distance: '80px'
+});
+
 sr.reveal('.js-reveal-about--title', {
   delay: 200,
   duration: 300,
@@ -187,6 +211,12 @@ sr.reveal('.js-reveal-contact-3', {
   distance: '80px'
 });
 
+sr.reveal('.js-reveal-donate', {
+  delay: 300,
+  duration: 500,
+  distance: '80px'
+});
+
 sr.reveal('.js-reveal-footer', {
   delay: 200,
   duration: 300,
@@ -214,8 +244,10 @@ nextButton.addEventListener('click', () => siema.next());
 // smooth scroll
 const contactsSection = document.querySelector('.js-contacts-section');
 const contactsButton = document.querySelector('.js-contacts-button');
+const customButton = document.querySelector('.js-custom-button');
 
 contactsButton.addEventListener('click', () => zenscroll.to(contactsSection));
+customButton.addEventListener('click', () => zenscroll.to(contactsSection));
 
 const topbarSection = document.querySelector('.js-topbar-section');
 const backToTopButton = document.querySelector('.js-toTop-button');
