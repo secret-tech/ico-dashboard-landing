@@ -581,7 +581,6 @@ html, body {
 .members .member .name {
   color: #fff;
   font-size: 24px;
-  font-family: 'Raleway';
   margin-top: 20px;
 }
 
@@ -689,7 +688,7 @@ html, body {
 }
 
 .donate .title {
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-size: 18px;
   font-weight: 100;
   color: #fff;
@@ -699,7 +698,7 @@ html, body {
 
 .donate .address {
   font-size: 36px;
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-weight: 300;
   color: #fff;
   text-align: center;
